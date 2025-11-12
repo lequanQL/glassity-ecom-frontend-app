@@ -1,23 +1,7 @@
 import { RenderMode, ServerRoute } from '@angular/ssr';
 
 export const serverRoutes: ServerRoute[] = [
-  // Static routes that can be prerendered
-  {
-    path: '',
-    renderMode: RenderMode.Prerender
-  },
-  {
-    path: 'collection',
-    renderMode: RenderMode.Prerender
-  },
-  {
-    path: 'products',
-    renderMode: RenderMode.Prerender
-  },
-  {
-    path: 'landing',
-    renderMode: RenderMode.Prerender
-  },
+  // Static routes that can be prerendered (no data dependencies)
   {
     path: 'login',
     renderMode: RenderMode.Prerender
@@ -50,7 +34,23 @@ export const serverRoutes: ServerRoute[] = [
     path: 'privacy-policy',
     renderMode: RenderMode.Prerender
   },
-  // Dynamic routes that should use SSR instead of prerendering
+  {
+    path: 'landing',
+    renderMode: RenderMode.Prerender
+  },
+  // Data-dependent routes that should use SSR (load JSON files)
+  {
+    path: '',
+    renderMode: RenderMode.Server
+  },
+  {
+    path: 'collection',
+    renderMode: RenderMode.Server
+  },
+  {
+    path: 'products',
+    renderMode: RenderMode.Server
+  },
   {
     path: 'detail/**',
     renderMode: RenderMode.Server
