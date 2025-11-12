@@ -1,0 +1,40 @@
+.not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.content img {
+    width: 100%;
+    height: auto;
+}
+
+.back-home {
+    position: absolute;
+    top: 70%;
+    border: 2px solid white;
+    backdrop-filter: blur(10px);
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    width: 300px;
+}
+
+.back-home:hover {
+    background-color: #0056b3;
+}
+
+.back-home:active {
+    background-color: #004085;
+}

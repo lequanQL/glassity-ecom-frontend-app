@@ -1,0 +1,183 @@
+<div class="modal-overlay" *ngIf="isVisible" (click)="closeModal()">
+    <div class="modal-container" (click)="$event.stopPropagation()">
+        <div class="modal-header">
+            <h2 class="modal-title">EDITING PRODUCT</h2>
+            <button class="close-btn" (click)="closeModal()">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="modal-body">
+            <form class="product-form" (ngSubmit)="saveProduct()">
+                <div class="form-row">
+                    <label class="form-label" for="name1">Product Name:</label>
+                    <input 
+                        type="text" 
+                        id="name1"
+                        class="form-input" 
+                        [(ngModel)]="product.name1" 
+                        name="name1"
+                        required>
+                    <span class="required">*</span>
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="name2">Additional Name:</label>
+                    <input 
+                        type="text" 
+                        id="name2"
+                        class="form-input" 
+                        [(ngModel)]="product.name2" 
+                        name="name2">
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="category">Category:</label>
+                    <select 
+                        id="category"
+                        class="form-input" 
+                        [(ngModel)]="product.category" 
+                        name="category"
+                        required>
+                        <option value="">Select Category</option>
+                        <option *ngFor="let cat of categories" [value]="cat">{{cat}}</option>
+                    </select>
+                    <span class="required">*</span>
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="collection">Collection:</label>
+                    <select 
+                        id="collection"
+                        class="form-input" 
+                        [(ngModel)]="product.collection" 
+                        name="collection"
+                        required>
+                        <option value="">Select Collection</option>
+                        <option *ngFor="let col of collections" [value]="col">{{col}}</option>
+                    </select>
+                    <span class="required">*</span>
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="status">Status:</label>
+                    <select 
+                        id="status"
+                        class="form-input" 
+                        [(ngModel)]="product.status" 
+                        name="status"
+                        required>
+                        <option value="">Select Status</option>
+                        <option *ngFor="let stat of statusOptions" [value]="stat">{{stat}}</option>
+                    </select>
+                    <span class="required">*</span>
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="color">Color:</label>
+                    <input 
+                        type="text" 
+                        id="color"
+                        class="form-input" 
+                        [(ngModel)]="product.color" 
+                        name="color"
+                        required>
+                    <span class="required">*</span>
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="frameMaterial">Frame Material:</label>
+                    <input 
+                        type="text" 
+                        id="frameMaterial"
+                        class="form-input" 
+                        [(ngModel)]="product.frameMaterial" 
+                        name="frameMaterial"
+                        placeholder="e.g., Acetate, Metal, TR90">
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="lensMaterial">Lens Material:</label>
+                    <input 
+                        type="text" 
+                        id="lensMaterial"
+                        class="form-input" 
+                        [(ngModel)]="product.lensMaterial" 
+                        name="lensMaterial"
+                        placeholder="e.g., CR-39, Polycarbonate">
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="price">Price (VND):</label>
+                    <input 
+                        type="number" 
+                        id="price"
+                        class="form-input" 
+                        [(ngModel)]="product.price" 
+                        name="price"
+                        min="0"
+                        required>
+                    <span class="required">*</span>
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="stock">Stock:</label>
+                    <input 
+                        type="number" 
+                        id="stock"
+                        class="form-input" 
+                        [(ngModel)]="product.stock" 
+                        name="stock"
+                        min="0"
+                        required>
+                    <span class="required">*</span>
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="description">Description:</label>
+                    <textarea 
+                        id="description"
+                        class="form-textarea" 
+                        [(ngModel)]="product.description" 
+                        name="description"
+                        rows="3"
+                        placeholder="Product description..."></textarea>
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label">Images:</label>
+                    <div class="image-upload-section">
+                        <button type="button" class="upload-btn" (click)="selectImages()">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                                <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093L6.93 9.994 4.777 8.447a.5.5 0 0 0-.63.062L2.002 10V3a1 1 0 0 1 1-1z"/>
+                            </svg>
+                            Upload Images
+                        </button>
+                        <input 
+                            type="file" 
+                            #fileInput
+                            (change)="onImageSelect($event)" 
+                            multiple 
+                            accept="image/*"
+                            style="display: none">
+                        
+                        <div class="selected-images" *ngIf="product.images.length > 0">
+                            <div *ngFor="let image of product.images; let i = index" class="image-preview">
+                                <span class="image-name">{{image.name}}</span>
+                                <button type="button" class="remove-image" (click)="removeImage(i)">×</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn" (click)="closeModal()">Cancel</button>
+                    <button type="submit" class="save-btn">Update Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+<div class="login-page">
+    <div class="login-container">
+        <div class="left-side">
+            <div class="title">
+                <div class="welcome">
+                    Welcome
+                </div>
+                <div class="back">
+                    Back
+                </div>
+            </div>
+            <div class="des">
+                Please enter your details
+            </div>
+            <div class="google-login-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z" />
+                </svg>
+                <div class="content" style="margin-left: 10px;">Log in with Google</div>
+            </div>
+            <div class="break-section">
+                <div class="line"></div>
+                <div class="or">OR</div>
+                <div class="line"></div>
+            </div>
+            <div class="form">
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+                <div class="input-group remember-group">
+                    <label for="remember" class="remember-label">
+                        <input type="checkbox" id="remember" name="remember">
+                        Remember
+                    </label>
+                </div>
+                <div class="forgot-password" (click)="goToForgotPassword()">
+                    Forgot Password?
+                </div>
+                <div class="login-btn" (click)="login()" [class.loading]="isLoading">
+                    <span *ngIf="!isLoading">LOG IN</span>
+                    <span *ngIf="isLoading" class="loading-text">
+                        <svg class="spinner" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="15.71 15.71">
+                                <animate attributeName="stroke-dasharray" dur="1s" values="0 31.42;15.71 15.71;0 31.42" repeatCount="indefinite"/>
+                                <animate attributeName="stroke-dashoffset" dur="1s" values="0;-15.71;-31.42" repeatCount="indefinite"/>
+                            </circle>
+                        </svg>
+                        Logging in...
+                    </span>
+                </div>
+                <div class="signup-section">
+                    Don't have an account? <a class="signup-link" (click)="goToSignUp()">Sign up</a>
+                </div>
+            </div>
+        </div>
+        <div class="right-side">
+            <img class="image" src="assets/images/auth.png" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="modal" [class.show]="showModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
+                <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057"/>
+                <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
+            </svg>
+            <span>Login Error</span>
+        </div>
+        <p>{{ modalMessage }}</p>
+        <div class="modal-actions">
+            <button class="btn-primary" (click)="closeModal()">OK</button>
+        </div>
+    </div>
+</div>

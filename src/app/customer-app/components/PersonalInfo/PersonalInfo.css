@@ -1,0 +1,179 @@
+/* Personal Information Styles */
+.personal-information {
+    padding: 24px;
+    min-width: 320px;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.user-profile .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #e0e0e0;
+}
+
+.user-profile .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-details .name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.user-details .email {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.role-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.role-badge.admin {
+    background: #dc3545;
+    color: white;
+}
+
+.role-badge.customer {
+    background: #28a745;
+    color: white;
+}
+
+/* Menu Section */
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.menu-item:hover {
+    background: #f8f9fa;
+    color: #333;
+    transform: translateX(2px);
+}
+
+.menu-item svg {
+    flex-shrink: 0;
+    opacity: 0.7;
+}
+
+.menu-item:hover svg {
+    opacity: 1;
+}
+
+/* Login Prompt Styles */
+.login-prompt {
+    padding: 32px;
+    text-align: center;
+    min-width: 300px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-prompt .login-icon {
+    margin-bottom: 16px;
+    color: #6c757d;
+}
+
+.login-prompt .login-icon svg {
+    width: 48px;
+    height: 48px;
+}
+
+.login-text .title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.login-text .subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 24px;
+    line-height: 1.4;
+}
+
+.login-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    background: #0056b3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.login-btn svg {
+    flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .personal-information,
+    .login-prompt {
+        padding: 20px;
+        min-width: 280px;
+    }
+    
+    .user-profile {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    
+    .user-profile .avatar {
+        width: 50px;
+        height: 50px;
+    }
+}

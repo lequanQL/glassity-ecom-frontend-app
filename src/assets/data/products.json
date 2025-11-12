@@ -1,0 +1,910 @@
+[
+    {
+        "id": 1,
+        "code": "BST001",
+        "name": "Classic Square Frame",
+        "fullName": "Gọng kính vuông cổ điển",
+        "price": 450000,
+        "originalPrice": 500000,
+        "stock": 43,
+        "category": "Prescription Glasses",
+        "collection": "Fresh Summer",
+        "status": "In Stock",
+        "description": "Gọng kính vuông cổ điển với thiết kế thanh lịch, phù hợp với nhiều khuôn mặt. Chất liệu acetate cao cấp bền đẹp theo thời gian.",
+        "materials": {
+            "frame": "Acetate",
+            "lens": "CR-39",
+            "temple": "Acetate reinforced"
+        },
+        "specifications": {
+            "lensWidth": 52,
+            "bridgeWidth": 18,
+            "templeLength": 140,
+            "frameWidth": 138,
+            "frameHeight": 42,
+            "weight": "28g"
+        },
+        "features": ["UV Protection", "Anti-Glare", "Lightweight", "Adjustable Nose Pads"],
+        "colors": [
+            {
+                "name": "Dark Gray",
+                "code": "#4d4d4d",
+                "image": "assets/images/product_items/bst1/%234d4d4d.png",
+                "stock": 15
+            },
+            {
+                "name": "Brown",
+                "code": "#613b38",
+                "image": "assets/images/product_items/bst1/%23613b38.png",
+                "stock": 12
+            },
+            {
+                "name": "Light Brown",
+                "code": "#72493a",
+                "image": "assets/images/product_items/bst1/%2372493a.png",
+                "stock": 8
+            },
+            {
+                "name": "Amber",
+                "code": "#724d1a",
+                "image": "assets/images/product_items/bst1/%23724d1a.png",
+                "stock": 5
+            },
+            {
+                "name": "Gold",
+                "code": "#f3cb7f",
+                "image": "assets/images/product_items/bst1/%23f3cb7f.png",
+                "stock": 3
+            }
+        ],
+        "defaultColor": "#4d4d4d",
+        "img": "assets/images/product_items/bst1/%234d4d4d.png",
+        "rating": 4.5,
+        "reviewCount": 128,
+        "tags": ["bestseller", "classic", "unisex"],
+        "relatedProducts": [2, 3, 4]
+    },
+    {
+        "id": 2,
+        "code": "BST002",
+        "name": "Retro Round Frame",
+        "fullName": "Gọng kính tròn phong cách retro",
+        "price": 520000,
+        "originalPrice": 580000,
+        "stock": 67,
+        "category": "Prescription Glasses",
+        "collection": "Fresh Summer",
+        "status": "In Stock",
+        "description": "Gọng kính tròn mang phong cách retro độc đáo, tạo điểm nhấn cho gương mặt. Thiết kế vintage kết hợp công nghệ hiện đại.",
+        "materials": {
+            "frame": "Titanium",
+            "lens": "Polycarbonate",
+            "temple": "Stainless Steel"
+        },
+        "specifications": {
+            "lensWidth": 48,
+            "bridgeWidth": 22,
+            "templeLength": 145,
+            "frameWidth": 140,
+            "frameHeight": 48,
+            "weight": "22g"
+        },
+        "features": ["UV Protection", "Blue Light Filter", "Ultra Lightweight", "Hypoallergenic"],
+        "colors": [
+            {
+                "name": "Black",
+                "code": "#1a1a1a",
+                "image": "assets/images/product_items/bst2/%231a1a1a.png",
+                "stock": 20
+            },
+            {
+                "name": "Dark Brown",
+                "code": "#55322a",
+                "image": "assets/images/product_items/bst2/%2355322a.png",
+                "stock": 18
+            },
+            {
+                "name": "Gray Blue",
+                "code": "#6b797c",
+                "image": "assets/images/product_items/bst2/%236b797c.png",
+                "stock": 15
+            },
+            {
+                "name": "Light Brown",
+                "code": "#8f7a62",
+                "image": "assets/images/product_items/bst2/%238f7a62.png",
+                "stock": 8
+            },
+            {
+                "name": "Rose Gold",
+                "code": "#e7dbd8",
+                "image": "assets/images/product_items/bst2/%23e7dbd8.png",
+                "stock": 6
+            }
+        ],
+        "defaultColor": "#1a1a1a",
+        "img": "assets/images/product_items/bst2/%231a1a1a.png",
+        "rating": 4.3,
+        "reviewCount": 95,
+        "tags": ["retro", "round", "vintage"],
+        "relatedProducts": [1, 5, 6]
+    },
+    {
+        "id": 3,
+        "code": "BST003",
+        "name": "Cat Eye Elegance",
+        "fullName": "Gọng kính cat eye thanh lịch",
+        "price": 480000,
+        "originalPrice": 550000,
+        "stock": 32,
+        "category": "Prescription Glasses",
+        "collection": "Fresh Summer",
+        "status": "In Stock",
+        "description": "Gọng kính cat eye mang phong cách nữ tính và thanh lịch, tôn lên vẻ đẹp quyến rũ của phái đẹp.",
+        "materials": {
+            "frame": "Acetate",
+            "lens": "CR-39",
+            "temple": "Metal"
+        },
+        "specifications": {
+            "lensWidth": 54,
+            "bridgeWidth": 16,
+            "templeLength": 138,
+            "frameWidth": 142,
+            "frameHeight": 38,
+            "weight": "25g"
+        },
+        "features": ["UV Protection", "Scratch Resistant", "Lightweight", "Fashion Forward"],
+        "colors": [
+            {
+                "name": "Olive Green",
+                "code": "#555843",
+                "image": "assets/images/product_items/bst3/%23555843.png",
+                "stock": 12
+            },
+            {
+                "name": "Forest Green",
+                "code": "#7c884a",
+                "image": "assets/images/product_items/bst3/%237c884a.png",
+                "stock": 10
+            },
+            {
+                "name": "Gray",
+                "code": "#8e8a87",
+                "image": "assets/images/product_items/bst3/%238e8a87.png",
+                "stock": 6
+            },
+            {
+                "name": "Light Brown",
+                "code": "#a79593",
+                "image": "assets/images/product_items/bst3/%23a79593.png",
+                "stock": 4
+            }
+        ],
+        "defaultColor": "#555843",
+        "img": "assets/images/product_items/bst3/%23555843.png",
+        "rating": 4.7,
+        "reviewCount": 156,
+        "tags": ["cateye", "feminine", "elegant"],
+        "relatedProducts": [1, 2, 7]
+    },
+    {
+        "id": 4,
+        "code": "BST004",
+        "name": "Modern Aviator",
+        "fullName": "Gọng kính aviator hiện đại",
+        "price": 650000,
+        "originalPrice": 720000,
+        "stock": 28,
+        "category": "Sunglasses",
+        "collection": "Fresh Summer",
+        "status": "In Stock",
+        "description": "Gọng kính aviator hiện đại với thiết kế cải tiến, phù hợp cho cả nam và nữ. Phong cách thời trang và chuyên nghiệp.",
+        "materials": {
+            "frame": "Stainless Steel",
+            "lens": "Polarized",
+            "temple": "Titanium"
+        },
+        "specifications": {
+            "lensWidth": 58,
+            "bridgeWidth": 14,
+            "templeLength": 140,
+            "frameWidth": 145,
+            "frameHeight": 50,
+            "weight": "32g"
+        },
+        "features": ["Polarized", "UV400 Protection", "Anti-Reflection", "Durable"],
+        "colors": [
+            {
+                "name": "Black",
+                "code": "#040402",
+                "image": "assets/images/product_items/bst4/%23040402.png",
+                "stock": 15
+            },
+            {
+                "name": "Dark Brown",
+                "code": "#3d2f2d",
+                "image": "assets/images/product_items/bst4/%233d2f2d.png",
+                "stock": 8
+            },
+            {
+                "name": "Brown",
+                "code": "#531e08",
+                "image": "assets/images/product_items/bst4/%23531e08.png",
+                "stock": 5
+            },
+            {
+                "name": "Beige",
+                "code": "#d7caa5",
+                "image": "assets/images/product_items/bst4/%23d7caa5.png",
+                "stock": 3
+            },
+            {
+                "name": "Light Gold",
+                "code": "#eec673",
+                "image": "assets/images/product_items/bst4/%23eec673.png",
+                "stock": 2
+            }
+        ],
+        "defaultColor": "#040402",
+        "img": "assets/images/product_items/bst4/%23040402.png",
+        "rating": 4.6,
+        "reviewCount": 203,
+        "tags": ["aviator", "sunglasses", "unisex"],
+        "relatedProducts": [8, 9, 10]
+    },
+    {
+        "id": 5,
+        "code": "BST005",
+        "name": "Wayfare Classic",
+        "fullName": "Gọng kính wayfare cổ điển",
+        "price": 420000,
+        "originalPrice": 480000,
+        "stock": 45,
+        "category": "Sunglasses",
+        "collection": "Noir Panther",
+        "status": "In Stock",
+        "description": "Gọng kính wayfare cổ điển với thiết kế iconic, phù hợp mọi lứa tuổi và phong cách.",
+        "materials": {
+            "frame": "Acetate",
+            "lens": "CR-39",
+            "temple": "Acetate"
+        },
+        "specifications": {
+            "lensWidth": 50,
+            "bridgeWidth": 22,
+            "templeLength": 150,
+            "frameWidth": 144,
+            "frameHeight": 46,
+            "weight": "29g"
+        },
+        "features": ["UV Protection", "Classic Design", "Comfortable Fit", "Timeless"],
+        "colors": [
+            {
+                "name": "Dark Gray",
+                "code": "#5a6060",
+                "image": "assets/images/product_items/bst5/%235a6060.png",
+                "stock": 20
+            },
+            {
+                "name": "Blue Gray",
+                "code": "#627681",
+                "image": "assets/images/product_items/bst5/%23627681.png",
+                "stock": 15
+            },
+            {
+                "name": "Green Gray",
+                "code": "#838570",
+                "image": "assets/images/product_items/bst5/%23838570.png",
+                "stock": 10
+            },
+            {
+                "name": "Brown",
+                "code": "#876b53",
+                "image": "assets/images/product_items/bst5/%23876b53.png",
+                "stock": 8
+            }
+        ],
+        "defaultColor": "#5a6060",
+        "img": "assets/images/product_items/bst5/%235a6060.png",
+        "rating": 4.4,
+        "reviewCount": 167,
+        "tags": ["wayfare", "classic", "sunglasses"],
+        "relatedProducts": [2, 4, 6]
+    },
+    {
+        "id": 6,
+        "code": "SPE001",
+        "name": "Limited Edition Frame",
+        "fullName": "Gọng kính phiên bản giới hạn",
+        "price": 1200000,
+        "originalPrice": 1500000,
+        "stock": 15,
+        "category": "Prescription Glasses",
+        "collection": "Special Edition",
+        "status": "Limited",
+        "description": "Gọng kính phiên bản giới hạn với thiết kế độc đáo và chất liệu cao cấp. Sản phẩm dành cho những ai yêu thích sự khác biệt.",
+        "materials": {
+            "frame": "Titanium Beta",
+            "lens": "Zeiss",
+            "temple": "Carbon Fiber"
+        },
+        "specifications": {
+            "lensWidth": 52,
+            "bridgeWidth": 18,
+            "templeLength": 142,
+            "frameWidth": 140,
+            "frameHeight": 44,
+            "weight": "18g"
+        },
+        "features": ["Ultra Lightweight", "Premium Materials", "Handcrafted", "Limited Edition"],
+        "colors": [
+            {
+                "name": "Matte Black",
+                "code": "#242424",
+                "image": "assets/images/product_items/special1/%23242424.png",
+                "stock": 8
+            }
+        ],
+        "defaultColor": "#242424",
+        "img": "assets/images/product_items/special1/%23242424.png",
+        "rating": 4.9,
+        "reviewCount": 45,
+        "tags": ["limited", "premium", "exclusive"],
+        "relatedProducts": [7, 8, 9]
+    },
+    {
+        "id": 7,
+        "code": "BST006",
+        "name": "Sport Frame Pro",
+        "fullName": "Gọng kính thể thao chuyên nghiệp",
+        "price": 580000,
+        "originalPrice": 650000,
+        "stock": 38,
+        "category": "Sports Glasses",
+        "collection": "Noir Panther",
+        "status": "In Stock",
+        "description": "Gọng kính thể thao với thiết kế chuyên nghiệp, chống trượt và chống va đập. Ideal cho các hoạt động thể thao.",
+        "materials": {
+            "frame": "TR90",
+            "lens": "Polycarbonate",
+            "temple": "Rubber Grip"
+        },
+        "specifications": {
+            "lensWidth": 65,
+            "bridgeWidth": 12,
+            "templeLength": 125,
+            "frameWidth": 142,
+            "frameHeight": 40,
+            "weight": "24g"
+        },
+        "features": ["Impact Resistant", "Anti-Slip", "Wraparound Design", "Sports Optimized"],
+        "colors": [
+            {
+                "name": "Dark Gray",
+                "code": "#2e2b2c",
+                "image": "assets/images/product_items/bst6/%232e2b2c.png",
+                "stock": 15
+            },
+            {
+                "name": "Charcoal",
+                "code": "#3c3030",
+                "image": "assets/images/product_items/bst6/%233c3030.png",
+                "stock": 12
+            },
+            {
+                "name": "Brown",
+                "code": "#55352f",
+                "image": "assets/images/product_items/bst6/%2355352f.png",
+                "stock": 11
+            },
+            {
+                "name": "Cream",
+                "code": "#e1d1b7",
+                "image": "assets/images/product_items/bst6/%23e1d1b7.png",
+                "stock": 8
+            }
+        ],
+        "defaultColor": "#2e2b2c",
+        "img": "assets/images/product_items/bst6/%232e2b2c.png",
+        "rating": 4.5,
+        "reviewCount": 89,
+        "tags": ["sports", "active", "durable"],
+        "relatedProducts": [4, 8, 10]
+    },
+    {
+        "id": 8,
+        "code": "BST007",
+        "name": "Business Elite",
+        "fullName": "Gọng kính doanh nhân cao cấp",
+        "price": 750000,
+        "originalPrice": 850000,
+        "stock": 22,
+        "category": "Prescription Glasses",
+        "collection": "Noir Panther",
+        "status": "In Stock",
+        "description": "Gọng kính dành cho doanh nhân với thiết kế lịch lãm và chuyên nghiệp. Tôn lên phong thái lãnh đạo.",
+        "materials": {
+            "frame": "Titanium",
+            "lens": "Anti-Blue Light",
+            "temple": "Stainless Steel"
+        },
+        "specifications": {
+            "lensWidth": 54,
+            "bridgeWidth": 17,
+            "templeLength": 145,
+            "frameWidth": 142,
+            "frameHeight": 40,
+            "weight": "26g"
+        },
+        "features": ["Blue Light Filter", "Premium Finish", "Professional Look", "Anti-Glare"],
+        "colors": [
+            {
+                "name": "Forest Green",
+                "code": "#4a5d3d",
+                "image": "assets/images/product_items/bst7/%234a5d3d.png",
+                "stock": 12
+            },
+            {
+                "name": "Charcoal Gray",
+                "code": "#54504f",
+                "image": "assets/images/product_items/bst7/%2354504f.png",
+                "stock": 6
+            },
+            {
+                "name": "Brown",
+                "code": "#946d56",
+                "image": "assets/images/product_items/bst7/%23946d56.png",
+                "stock": 4
+            }
+        ],
+        "defaultColor": "#4a5d3d",
+        "img": "assets/images/product_items/bst7/%234a5d3d.png",
+        "rating": 4.7,
+        "reviewCount": 134,
+        "tags": ["business", "professional", "premium"],
+        "relatedProducts": [1, 6, 9]
+    },
+    {
+        "id": 9,
+        "code": "BST008",
+        "name": "Fashion Forward",
+        "fullName": "Gọng kính thời trang tiên phong",
+        "price": 390000,
+        "originalPrice": 450000,
+        "stock": 34,
+        "category": "Fashion Glasses",
+        "collection": "Noir Panther",
+        "status": "In Stock",
+        "description": "Gọng kính thời trang với thiết kế đột phá, dành cho những ai yêu thích phong cách năng động và hiện đại.",
+        "materials": {
+            "frame": "Acetate",
+            "lens": "CR-39",
+            "temple": "Metal"
+        },
+        "specifications": {
+            "lensWidth": 53,
+            "bridgeWidth": 19,
+            "templeLength": 142,
+            "frameWidth": 141,
+            "frameHeight": 45,
+            "weight": "27g"
+        },
+        "features": ["UV Protection", "Fashion Design", "Lightweight", "Trendy"],
+        "colors": [
+            {
+                "name": "Blue Gray",
+                "code": "#587a96",
+                "image": "assets/images/product_items/bst8/%23587a96.png",
+                "stock": 14
+            },
+            {
+                "name": "Brown",
+                "code": "#83756c",
+                "image": "assets/images/product_items/bst8/%2383756c.png",
+                "stock": 12
+            },
+            {
+                "name": "Gray",
+                "code": "#87908f",
+                "image": "assets/images/product_items/bst8/%2387908f.png",
+                "stock": 8
+            }
+        ],
+        "defaultColor": "#587a96",
+        "img": "assets/images/product_items/bst8/%23587a96.png",
+        "rating": 4.2,
+        "reviewCount": 76,
+        "tags": ["fashion", "trendy", "young"],
+        "relatedProducts": [3, 5, 10]
+    },
+    {
+        "id": 10,
+        "code": "BST009",
+        "name": "Minimalist Design",
+        "fullName": "Gọng kính thiết kế tối giản",
+        "price": 320000,
+        "originalPrice": 380000,
+        "stock": 56,
+        "category": "Prescription Glasses",
+        "collection": "Best Seller",
+        "status": "In Stock",
+        "description": "Gọng kính thiết kế tối giản với đường nét sạch sẽ, phù hợp với phong cách hiện đại và thanh lịch.",
+        "materials": {
+            "frame": "Metal",
+            "lens": "CR-39",
+            "temple": "Stainless Steel"
+        },
+        "specifications": {
+            "lensWidth": 51,
+            "bridgeWidth": 20,
+            "templeLength": 144,
+            "frameWidth": 140,
+            "frameHeight": 38,
+            "weight": "19g"
+        },
+        "features": ["Ultra Lightweight", "Minimalist Design", "Comfortable", "Modern"],
+        "colors": [
+            {
+                "name": "Blue",
+                "code": "#6c8bab",
+                "image": "assets/images/product_items/bst9/%236c8bab.png",
+                "stock": 20
+            },
+            {
+                "name": "Gray",
+                "code": "#748080",
+                "image": "assets/images/product_items/bst9/%23748080.png",
+                "stock": 18
+            },
+            {
+                "name": "Brown",
+                "code": "#82766b",
+                "image": "assets/images/product_items/bst9/%2382766b.png",
+                "stock": 18
+            },
+            {
+                "name": "Dark Brown",
+                "code": "#9c6546",
+                "image": "assets/images/product_items/bst9/%239c6546.png",
+                "stock": 15
+            }
+        ],
+        "defaultColor": "#6c8bab",
+        "img": "assets/images/product_items/bst9/%236c8bab.png",
+        "rating": 4.4,
+        "reviewCount": 102,
+        "tags": ["minimalist", "modern", "lightweight"],
+        "relatedProducts": [1, 2, 8]
+    },
+    {
+        "id": 11,
+        "code": "BST010",
+        "name": "Vintage Collection",
+        "fullName": "Bộ sưu tập vintage cổ điển",
+        "price": 480000,
+        "originalPrice": 550000,
+        "stock": 29,
+        "category": "Vintage Glasses",
+        "collection": "Best Seller",
+        "status": "In Stock",
+        "description": "Gọng kính vintage với thiết kế hoài cổ, mang đậm dấu ấn thời gian và phong cách cổ điển độc đáo.",
+        "materials": {
+            "frame": "Acetate",
+            "lens": "CR-39",
+            "temple": "Acetate"
+        },
+        "specifications": {
+            "lensWidth": 49,
+            "bridgeWidth": 23,
+            "templeLength": 148,
+            "frameWidth": 143,
+            "frameHeight": 47,
+            "weight": "31g"
+        },
+        "features": ["Vintage Design", "Classic Style", "Quality Materials", "Retro Appeal"],
+        "colors": [
+            {
+                "name": "Dark Gray",
+                "code": "#595f5d",
+                "image": "assets/images/product_items/bst10/%23595f5d.png",
+                "stock": 12
+            },
+            {
+                "name": "Brown",
+                "code": "#855040",
+                "image": "assets/images/product_items/bst10/%23855040.png",
+                "stock": 9
+            },
+            {
+                "name": "Light Brown",
+                "code": "#b97e44",
+                "image": "assets/images/product_items/bst10/%23b97e44.png",
+                "stock": 8
+            },
+            {
+                "name": "Beige",
+                "code": "#baae96",
+                "image": "assets/images/product_items/bst10/%23baae96.png",
+                "stock": 6
+            }
+        ],
+        "defaultColor": "#595f5d",
+        "img": "assets/images/product_items/bst10/%23595f5d.png",
+        "rating": 4.6,
+        "reviewCount": 87,
+        "tags": ["vintage", "classic", "retro"],
+        "relatedProducts": [2, 3, 5]
+    },
+    {
+        "id": 12,
+        "code": "BST011",
+        "name": "Executive Power",
+        "fullName": "Gọng kính quyền lực dành cho giám đốc",
+        "price": 880000,
+        "originalPrice": 1000000,
+        "stock": 18,
+        "category": "Executive Glasses",
+        "collection": "Best Seller",
+        "status": "In Stock",
+        "description": "Gọng kính cao cấp dành cho các vị trí lãnh đạo, thể hiện sự quyền lực và đẳng cấp trong từng chi tiết.",
+        "materials": {
+            "frame": "Titanium",
+            "lens": "Zeiss",
+            "temple": "Carbon Fiber"
+        },
+        "specifications": {
+            "lensWidth": 56,
+            "bridgeWidth": 16,
+            "templeLength": 143,
+            "frameWidth": 144,
+            "frameHeight": 41,
+            "weight": "21g"
+        },
+        "features": ["Premium Materials", "Executive Design", "Luxury Finish", "Prestige"],
+        "colors": [
+            {
+                "name": "Black",
+                "code": "#090909",
+                "image": "assets/images/product_items/bst11/%23090909.png",
+                "stock": 8
+            },
+            {
+                "name": "Blue",
+                "code": "#19587b",
+                "image": "assets/images/product_items/bst11/%2319587b.png",
+                "stock": 6
+            },
+            {
+                "name": "Brown",
+                "code": "#885d22",
+                "image": "assets/images/product_items/bst11/%23885d22.png",
+                "stock": 4
+            },
+            {
+                "name": "Dark Brown",
+                "code": "#8a6e56",
+                "image": "assets/images/product_items/bst11/%238a6e56.png",
+                "stock": 3
+            },
+            {
+                "name": "Light Brown",
+                "code": "#ccad74",
+                "image": "assets/images/product_items/bst11/%23ccad74.png",
+                "stock": 2
+            },
+            {
+                "name": "Cream",
+                "code": "#f5e1be",
+                "image": "assets/images/product_items/bst11/%23f5e1be.png",
+                "stock": 1
+            }
+        ],
+        "defaultColor": "#090909",
+        "img": "assets/images/product_items/bst11/%23090909.png",
+        "rating": 4.8,
+        "reviewCount": 54,
+        "tags": ["executive", "luxury", "premium"],
+        "relatedProducts": [6, 8, 13]
+    },
+    {
+        "id": 13,
+        "code": "SPE002",
+        "name": "Crystal Vision",
+        "fullName": "Tầm nhìn pha lê đặc biệt",
+        "price": 950000,
+        "originalPrice": 1200000,
+        "stock": 12,
+        "category": "Crystal Glasses",
+        "collection": "Special Edition",
+        "status": "Limited",
+        "description": "Gọng kính pha lê với độ trong suốt hoàn hảo, thiết kế độc đáo tạo cảm giác nhẹ nhàng và tinh tế.",
+        "materials": {
+            "frame": "Crystal Acetate",
+            "lens": "Zeiss",
+            "temple": "Titanium"
+        },
+        "specifications": {
+            "lensWidth": 53,
+            "bridgeWidth": 17,
+            "templeLength": 141,
+            "frameWidth": 139,
+            "frameHeight": 43,
+            "weight": "23g"
+        },
+        "features": ["Crystal Clear", "Special Edition", "Luxury Design", "Limited Quantity"],
+        "colors": [
+            {
+                "name": "Clear Crystal",
+                "code": "#c6c8ca",
+                "image": "assets/images/product_items/special2/%23c6c8ca.png",
+                "stock": 5
+            }
+        ],
+        "defaultColor": "#c6c8ca",
+        "img": "assets/images/product_items/special2/%23c6c8ca.png",
+        "rating": 4.9,
+        "reviewCount": 32,
+        "tags": ["crystal", "luxury", "special"],
+        "relatedProducts": [6, 12, 14]
+    },
+    {
+        "id": 14,
+        "code": "SPE003",
+        "name": "Diamond Edition",
+        "fullName": "Phiên bản kim cương",
+        "price": 1500000,
+        "originalPrice": 2000000,
+        "stock": 8,
+        "category": "Diamond Glasses",
+        "collection": "Special Edition",
+        "status": "VIP Only",
+        "description": "Gọng kính phiên bản kim cương với các chi tiết được chế tác thủ công, dành cho khách hàng VIP đặc biệt.",
+        "materials": {
+            "frame": "Platinum",
+            "lens": "Diamond Coating",
+            "temple": "18K Gold"
+        },
+        "specifications": {
+            "lensWidth": 55,
+            "bridgeWidth": 15,
+            "templeLength": 140,
+            "frameWidth": 142,
+            "frameHeight": 40,
+            "weight": "35g"
+        },
+        "features": ["Diamond Details", "Handcrafted", "VIP Exclusive", "Lifetime Warranty"],
+        "colors": [
+            {
+                "name": "Platinum Diamond",
+                "code": "#010101",
+                "image": "assets/images/product_items/special3/%23010101.png",
+                "stock": 3
+            }
+        ],
+        "defaultColor": "#010101",
+        "img": "assets/images/product_items/special3/%23010101.png",
+        "rating": 5.0,
+        "reviewCount": 12,
+        "tags": ["diamond", "vip", "exclusive"],
+        "relatedProducts": [6, 12, 13]
+    },
+    {
+        "id": 15,
+        "code": "SPE004",
+        "name": "Royal Collection",
+        "fullName": "Bộ sưu tập hoàng gia",
+        "price": 2200000,
+        "originalPrice": 2800000,
+        "stock": 5,
+        "category": "Royal Glasses",
+        "collection": "Special Edition",
+        "status": "Ultra Limited",
+        "description": "Bộ sưu tập hoàng gia với thiết kế sang trọng bậc nhất, được chế tác theo tiêu chuẩn hoàng gia châu Âu.",
+        "materials": {
+            "frame": "24K Gold",
+            "lens": "Sapphire Crystal",
+            "temple": "Platinum"
+        },
+        "specifications": {
+            "lensWidth": 56,
+            "bridgeWidth": 14,
+            "templeLength": 142,
+            "frameWidth": 144,
+            "frameHeight": 42,
+            "weight": "42g"
+        },
+        "features": ["Royal Design", "24K Gold", "Sapphire Crystal", "Museum Quality"],
+        "colors": [
+            {
+                "name": "Royal Gold",
+                "code": "#c8c9ca",
+                "image": "assets/images/product_items/special4/%23c8c9ca.png",
+                "stock": 2
+            }
+        ],
+        "defaultColor": "#c8c9ca",
+        "img": "assets/images/product_items/special4/%23c8c9ca.png",
+        "rating": 5.0,
+        "reviewCount": 5,
+        "tags": ["royal", "ultra-luxury", "museum"],
+        "relatedProducts": [6, 13, 14]
+    },
+    {
+        "id": 16,
+        "code": "BST012",
+        "name": "Youth Energy",
+        "fullName": "Năng lượng tuổi trẻ",
+        "price": 280000,
+        "originalPrice": 320000,
+        "stock": 78,
+        "category": "Youth Glasses",
+        "collection": "Best Seller",
+        "status": "In Stock",
+        "description": "Gọng kính năng động dành cho giới trẻ với thiết kế trẻ trung và màu sắc tươi sáng, thể hiện cá tính riêng.",
+        "materials": {
+            "frame": "TR90",
+            "lens": "PC",
+            "temple": "Flexible"
+        },
+        "specifications": {
+            "lensWidth": 50,
+            "bridgeWidth": 21,
+            "templeLength": 145,
+            "frameWidth": 138,
+            "frameHeight": 44,
+            "weight": "16g"
+        },
+        "features": ["Flexible Frame", "Youth Design", "Vibrant Colors", "Affordable"],
+        "colors": [
+            {
+                "name": "Black",
+                "code": "#0e0e10",
+                "image": "assets/images/product_items/bst16/%230e0e10.png",
+                "stock": 26
+            },
+            {
+                "name": "Dark Green",
+                "code": "#254739",
+                "image": "assets/images/product_items/bst16/%23254739.png",
+                "stock": 26
+            },
+            {
+                "name": "Brown",
+                "code": "#5e4336",
+                "image": "assets/images/product_items/bst16/%235e4336.png",
+                "stock": 26
+            },
+            {
+                "name": "Olive",
+                "code": "#6b6954",
+                "image": "assets/images/product_items/bst16/%236b6954.png",
+                "stock": 20
+            },
+            {
+                "name": "Light Brown",
+                "code": "#795a3b",
+                "image": "assets/images/product_items/bst16/%23795a3b.png",
+                "stock": 15
+            },
+            {
+                "name": "Tan",
+                "code": "#aa8a6a",
+                "image": "assets/images/product_items/bst16/%23aa8a6a.png",
+                "stock": 12
+            },
+            {
+                "name": "Light Gray",
+                "code": "#b1abac",
+                "image": "assets/images/product_items/bst16/%23b1abac.png",
+                "stock": 8
+            }
+        ],
+        "defaultColor": "#0e0e10",
+        "img": "assets/images/product_items/bst16/%230e0e10.png",
+        "rating": 4.1,
+        "reviewCount": 145,
+        "tags": ["youth", "colorful", "flexible"],
+        "relatedProducts": [9, 10, 11]
+    }
+]

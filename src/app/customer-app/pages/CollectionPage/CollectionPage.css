@@ -1,0 +1,115 @@
+.collection-page .top-section {
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+    height: 50vh;
+}
+
+.collection-page .top-section .left-side {
+    width: 50%;
+    background-color: #B35517;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.collection-page .top-section .left-side .content {
+    margin: 5%;
+}
+
+.collection-page .fresh-summer-collection{
+    margin: 5%;
+}
+
+.collection-page .limited{
+    margin: 5%;
+}
+
+.collection-page .noir{
+    margin: 5%;
+}
+
+.collection-page .collection-section {
+    margin: 5%;
+    padding: 2rem 0;
+}
+
+.collection-page .collection-section:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.collection-page .title {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.collection-page .filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.collection-page .filter-btn {
+    background-color: #B35517;
+    margin-inline: 20px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.collection-page .line {
+    height: 2px;
+    background-color: #91918f;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.collection-page .products {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 2%;
+    align-items: center;
+    gap: 10px;
+}
+
+.collection-page .products product-item {
+    margin: 5px;
+}
+
+.collection-page .products ::ng-deep .product-item {
+    width: 350px;
+    margin: 5px;
+}
+
+.collection-page .products ::ng-deep .product-item img {
+    max-height: 450px;
+    width: 100%;
+    height: auto;
+}
+
+.collection-page .products ::ng-deep .product-item .name {
+    font-size: 22px;
+}
+
+.collection-page .products ::ng-deep .product-item .price {
+    font-size: 26px;
+}
+
+.collection-page .no-products {
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.collection-page .no-products p {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0;
+}

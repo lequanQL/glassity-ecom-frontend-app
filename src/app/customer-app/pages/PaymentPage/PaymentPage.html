@@ -1,0 +1,184 @@
+<div class="checkout-container">
+  <!-- Left: Shipping -->
+  <div class="checkout-left">
+    <h2>Shipping</h2>
+    <form class="shipping-form">
+      <input type="text" placeholder="Full Name" [(ngModel)]="shippingForm().fullName" name="fullName" />
+      <div class="row-three">
+        <input type="email" placeholder="Email" [(ngModel)]="shippingForm().email" name="email" />
+        <input type="tel" placeholder="Phone Number" [(ngModel)]="shippingForm().phone" name="phone" />
+      </div>
+      <input type="text" placeholder="Address" [(ngModel)]="shippingForm().address" name="address" />
+      <div class="row-three">
+        <input type="text" placeholder="City/Province" [(ngModel)]="shippingForm().city" name="city" />
+        <input type="text" placeholder="District" [(ngModel)]="shippingForm().district" name="district" />
+        <input type="text" placeholder="Ward/Commune" [(ngModel)]="shippingForm().ward" name="ward" />
+      </div>
+      <textarea placeholder="Order Note" [(ngModel)]="shippingForm().note" name="note"></textarea>
+
+      <h3>Shipping Method</h3>
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="delivery" [checked]="selectedDelivery() === 'standard'" 
+                 (change)="updateDelivery('standard')" />
+          Standard Delivery (35,000₫)
+        </label>
+        <label>
+          <input type="radio" name="delivery" [checked]="selectedDelivery() === 'express'"
+                 (change)="updateDelivery('express')" />
+          Express Delivery (50,000₫)
+        </label>
+      </div>
+
+      <h3>Payment</h3>
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="payment" [checked]="selectedPayment() === 'cod'"
+                 (change)="updatePayment('cod')" />
+          (COD) - Pay on Delivery
+        </label>
+        <label>
+          <input type="radio" name="payment" [checked]="selectedPayment() === 'bank'"
+                 (change)="updatePayment('bank')" />
+          Bank Transfer Payment
+        </label>
+      </div>
+
+      <button class="complete-btn" (click)="showOrderConfirmation()">Complete Order</button>
+    </form>
+  </div>
+
+  <!-- Right: Order Summary -->
+  <div class="checkout-right">
+    <h2>Order Summary</h2>
+    <div class="order-items">
+      <div class="item" *ngFor="let item of cartItems()">
+        <div class="check-box">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" 
+                   [checked]="isInWishlist(item)" 
+                   (change)="toggleWishlist(item)" 
+                   [id]="'check_' + item.id">
+          </div>
+        </div>
+        <img [src]="item.img" [alt]="item.name" />
+        <div class="item-info">
+          <p class="name">{{item.name}}</p>
+          <p class="code">{{item.code}}</p>
+          <div class="quantity-controls">
+            <button class="quantity-btn" (click)="decrementQuantity(item)">-</button>
+            <span class="quantity">{{item.quantity}}</span>
+            <button class="quantity-btn" (click)="incrementQuantity(item)">+</button>
+          </div>
+          <span class="price">{{item.price | priceFormat}}</span>
+        </div>
+      </div>
+    </div>
+
+    <h3>Available Voucher</h3>
+    <div class="voucher">
+      <input type="text" placeholder="Discount Code" [(ngModel)]="voucherCode" />
+      <button (click)="applyVoucher()">Apply</button>
+    </div>
+
+    <div class="summary">
+      <p><span>Subtotal</span> <span>{{subtotal() | priceFormat}}</span></p>
+      <p><span>Shipping</span> <span>{{shipping() | priceFormat}}</span></p>
+      <p><span>Member Discount</span> <span>{{memberDiscount | priceFormat}}</span></p>
+      <p><span>Coupon Discount</span> <span>{{couponDiscount | priceFormat}}</span></p>
+      <p class="total"><span>Total</span> <span>{{total() | priceFormat}}</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- Confirmation Modal -->
+<div class="modal-overlay" *ngIf="showConfirmModal()" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h2>Order Confirmation</h2>
+    
+    <div class="confirmation-details">
+      <div class="shipping-details">
+        <h3>Shipping Details</h3>
+        <p><strong>Full Name:</strong> {{shippingForm().fullName}}</p>
+        <p><strong>Email:</strong> {{shippingForm().email}}</p>
+        <p><strong>Phone:</strong> {{shippingForm().phone}}</p>
+        <p><strong>Address:</strong> {{shippingForm().address}}</p>
+        <p><strong>City/Province:</strong> {{shippingForm().city}}</p>
+        <p><strong>District:</strong> {{shippingForm().district}}</p>
+        <p><strong>Ward/Commune:</strong> {{shippingForm().ward}}</p>
+        <p><strong>Note:</strong> {{shippingForm().note}}</p>
+        <p><strong>Shipping Method:</strong> {{selectedDelivery() === 'express' ? 'Express Delivery' : 'Standard Delivery'}}</p>
+        <p><strong>Payment Method:</strong> {{selectedPayment() === 'cod' ? 'Cash on Delivery' : 'Bank Transfer'}}</p>
+      </div>
+
+      <div class="order-summary">
+        <h3>Order Summary</h3>
+        <div class="modal-items">
+          <div class="modal-item" *ngFor="let item of cartItems()">
+            <span>{{item.name}} (x{{item.quantity}})</span>
+            <span>{{item.price * item.quantity | priceFormat}}</span>
+          </div>
+        </div>
+        <div class="modal-totals">
+          <p><span>Subtotal:</span> <span>{{subtotal() | priceFormat}}</span></p>
+          <p><span>Shipping:</span> <span>{{shipping() | priceFormat}}</span></p>
+          <p><span>Member Discount:</span> <span>{{memberDiscount | priceFormat}}</span></p>
+          <p><span>Coupon Discount:</span> <span>{{couponDiscount | priceFormat}}</span></p>
+          <p class="modal-total"><span>Total:</span> <span>{{total() | priceFormat}}</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-actions">
+      <button class="confirm-btn" (click)="completeOrder()">Confirm Payment</button>
+      <p class="payment-notice">*Please retain your payment confirmation for reference or verification purposes*</p>
+    </div>
+  </div>
+</div>
+
+<!-- Bank Payment Modal -->
+<div class="modal-overlay" *ngIf="showBankPaymentModal()" (click)="closeBankPaymentModal()">
+  <div class="modal-content bank-payment-modal" (click)="$event.stopPropagation()">
+    <h2>Bank Transfer Payment</h2>
+    
+    <div class="bank-payment-content">
+      <div class="qr-code">
+        <img src="assets/images/qr.png" alt="QR Code" />
+      </div>
+      <div class="payment-info">
+        <h4>Payment Information</h4>
+        <p><strong>Bank:</strong> Bank for Investment and Development of Vietnam (BIDV)</p>
+        <p><strong>Account Number:</strong> 00000999999</p>
+        <p><strong>Account Holder:</strong> Nguyen Ha Lan Anh</p>
+        <p><strong>Amount:</strong> {{total() | priceFormat}}</p>
+        <p><strong>Transfer Content:</strong> Payment Order #{{orderNumber}}</p>
+      </div>
+    </div>
+
+    <div class="bank-payment-actions">
+      <button class="paid-btn" (click)="confirmBankPayment()">I Have Paid</button>
+      <button class="cancel-btn" (click)="closeBankPaymentModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- Login Required Modal -->
+<div class="modal-overlay" *ngIf="showLoginModal()" (click)="closeLoginModal()">
+  <div class="modal-content login-modal" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
+        <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057"/>
+        <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
+      </svg>
+      Login Required
+    </div>
+    <div class="modal-body">
+      <p>You need to login first to place an order.</p>
+      <p>Please login to your account to continue with the checkout process.</p>
+    </div>
+    <div class="modal-actions">
+      <button class="login-btn" (click)="goToLogin()">Go to Login</button>
+      <button class="cancel-btn" (click)="closeLoginModal()">Cancel</button>
+    </div>
+  </div>
+</div>

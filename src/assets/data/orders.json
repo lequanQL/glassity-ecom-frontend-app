@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "orderNumber": "GL20241112001",
+    "customerInfo": {
+      "fullName": "Nguyễn Văn An",
+      "email": "nguyen.van.an@example.com",
+      "phone": "0901234567",
+      "address": "123 Đường Lê Lợi",
+      "city": "Thành phố Hồ Chí Minh",
+      "district": "Quận 1",
+      "ward": "Phường Bến Nghé",
+      "note": "Giao hàng vào buổi chiều"
+    },
+    "items": [
+      {
+        "id": 1,
+        "name": "Kính cận thời trang",
+        "code": "BST1-001",
+        "price": 450000,
+        "quantity": 1,
+        "totalPrice": 450000,
+        "img": "assets/images/product_items/bst1/1.jpg"
+      }
+    ],
+    "shipping": {
+      "method": "standard",
+      "cost": 30000
+    },
+    "payment": {
+      "method": "COD",
+      "status": "pending"
+    },
+    "totals": {
+      "subtotal": 450000,
+      "shipping": 30000,
+      "memberDiscount": 0,
+      "couponDiscount": 0,
+      "total": 480000
+    },
+    "createdAt": "2024-11-12T08:30:00.000Z",
+    "status": "pending"
+  },
+  {
+    "id": 2,
+    "orderNumber": "GL20241112002",
+    "customerInfo": {
+      "fullName": "Trần Thị Bình",
+      "email": "tran.thi.binh@example.com",
+      "phone": "0909876543",
+      "address": "456 Đường Nguyễn Trãi",
+      "city": "Thành phố Hồ Chí Minh",
+      "district": "Quận 5",
+      "ward": "Phường 7",
+      "note": ""
+    },
+    "items": [
+      {
+        "id": 4,
+        "name": "Kính râm cao cấp",
+        "code": "BST2-003",
+        "price": 650000,
+        "quantity": 1,
+        "totalPrice": 650000,
+        "img": "assets/images/product_items/bst2/3.jpg"
+      }
+    ],
+    "shipping": {
+      "method": "express",
+      "cost": 50000
+    },
+    "payment": {
+      "method": "Bank Transfer",
+      "status": "paid"
+    },
+    "totals": {
+      "subtotal": 650000,
+      "shipping": 50000,
+      "memberDiscount": 0,
+      "couponDiscount": 0,
+      "total": 700000
+    },
+    "createdAt": "2024-11-12T09:15:00.000Z",
+    "status": "processing"
+  },
+    {
+    "id": 2,
+    "orderNumber": "GL20241112003",
+    "customerInfo": {
+      "fullName": "Trần Thị Bình",
+      "email": "tran.thi.binh@example.com",
+      "phone": "0909876543",
+      "address": "456 Đường Nguyễn Trãi",
+      "city": "Thành phố Hồ Chí Minh",
+      "district": "Quận 5",
+      "ward": "Phường 7",
+      "note": ""
+    },
+    "items": [
+      {
+        "id": 2,
+        "name": "Kính râm cao cấp",
+        "code": "BST2-003",
+        "price": 650000,
+        "quantity": 1,
+        "totalPrice": 650000,
+        "img": "assets/images/product_items/bst2/3.jpg"
+      }
+    ],
+    "shipping": {
+      "method": "express",
+      "cost": 50000
+    },
+    "payment": {
+      "method": "Bank Transfer",
+      "status": "paid"
+    },
+    "totals": {
+      "subtotal": 650000,
+      "shipping": 50000,
+      "memberDiscount": 0,
+      "couponDiscount": 0,
+      "total": 700000
+    },
+    "createdAt": "2024-11-12T09:15:00.000Z",
+    "status": "shipped"
+  },
+      {
+    "id": 4,
+    "orderNumber": "GL20241112004",
+    "customerInfo": {
+      "fullName": "Trần Thị Bình",
+      "email": "tran.thi.binh@example.com",
+      "phone": "0909876543",
+      "address": "456 Đường Nguyễn Trãi",
+      "city": "Thành phố Hồ Chí Minh",
+      "district": "Quận 5",
+      "ward": "Phường 7",
+      "note": ""
+    },
+    "items": [
+      {
+        "id": 2,
+        "name": "Kính râm cao cấp",
+        "code": "BST2-003",
+        "price": 650000,
+        "quantity": 1,
+        "totalPrice": 650000,
+        "img": "assets/images/product_items/bst2/3.jpg"
+      }
+    ],
+    "shipping": {
+      "method": "express",
+      "cost": 50000
+    },
+    "payment": {
+      "method": "Bank Transfer",
+      "status": "paid"
+    },
+    "totals": {
+      "subtotal": 650000,
+      "shipping": 50000,
+      "memberDiscount": 0,
+      "couponDiscount": 0,
+      "total": 700000
+    },
+    "createdAt": "2024-11-12T09:15:00.000Z",
+    "status": "delivered"
+  }
+]

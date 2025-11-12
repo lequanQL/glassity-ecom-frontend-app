@@ -1,0 +1,71 @@
+<div class="home-page">
+    <!-- Background Carousel -->
+    <div class="bg-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide" [class.active]="currentTopSlide === 0">
+                <img src="assets/images/homepage/top/top1.png" alt="Background 1">
+            </div>
+            <div class="carousel-slide" [class.active]="currentTopSlide === 1">
+                <img src="assets/images/homepage/top/top2.png" alt="Background 2">
+            </div>
+        </div>
+        <div class="carousel-dots">
+            <span class="dot" [class.active]="currentTopSlide === 0" (click)="goToTopSlide(0)"></span>
+            <span class="dot" [class.active]="currentTopSlide === 1" (click)="goToTopSlide(1)"></span>
+        </div>
+    </div>
+    <div class="products">
+        <product-item [img]="products[0]"></product-item>
+        <product-item [img]="products[1]"></product-item>
+    </div>
+     <div class="products">
+        <product-item [img]="products[2]"></product-item>
+        <product-item [img]="products[3]"></product-item>
+    </div>
+
+    <div class="explore-collection" style="text-align:center; margin:24px 0;">
+        <button routerLink="/collection" style="background:#314540; color:#fff; padding:12px 24px; border:none; border-radius:6px; font-weight:600; cursor:pointer; font-size: 20px;">
+            Explore the Collection
+        </button>
+    </div>
+
+    <!-- Bottom Carousel -->
+    <div class="bottom-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide" [class.active]="currentBottomSlide === 0">
+                <img src="assets/images/homepage/bottom/model.jpg" alt="Model">
+            </div>
+            <div class="carousel-slide" [class.active]="currentBottomSlide === 1">
+                <img src="assets/images/homepage/bottom/model1.jpg" alt="Model 1">
+            </div>
+            <div class="carousel-slide" [class.active]="currentBottomSlide === 2">
+                <img src="assets/images/homepage/bottom/model2.jpg" alt="Model 2">
+            </div>
+            <div class="carousel-slide" [class.active]="currentBottomSlide === 3">
+                <img src="assets/images/homepage/bottom/model3.jpg" alt="Model 3">
+            </div>
+            <div class="carousel-slide" [class.active]="currentBottomSlide === 4">
+                <img src="assets/images/homepage/bottom/model4.jpg" alt="Model 4">
+            </div>
+        </div>
+        <div class="carousel-navigation">
+            <button class="carousel-btn prev" (click)="previousBottomSlide()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15,18 9,12 15,6"></polyline>
+                </svg>
+            </button>
+            <button class="carousel-btn next" (click)="nextBottomSlide()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9,6 15,12 9,18"></polyline>
+                </svg>
+            </button>
+        </div>
+        <div class="carousel-dots">
+            <span class="dot" [class.active]="currentBottomSlide === 0" (click)="goToBottomSlide(0)"></span>
+            <span class="dot" [class.active]="currentBottomSlide === 1" (click)="goToBottomSlide(1)"></span>
+            <span class="dot" [class.active]="currentBottomSlide === 2" (click)="goToBottomSlide(2)"></span>
+            <span class="dot" [class.active]="currentBottomSlide === 3" (click)="goToBottomSlide(3)"></span>
+            <span class="dot" [class.active]="currentBottomSlide === 4" (click)="goToBottomSlide(4)"></span>
+        </div>
+    </div>
+</div>

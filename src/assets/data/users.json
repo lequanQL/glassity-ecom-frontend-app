@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "email": "admin@glassity.com",
+    "password": "admin",
+    "fullName": "Administrator",
+    "role": "admin",
+    "avatar": "assets/images/avatar.png",
+    "createdAt": "2024-11-01T00:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "username": "anan",
+    "email": "anpt23411@st.uel.edu.vn", 
+    "password": "123456",
+    "fullName": "An An",
+    "role": "customer",
+    "avatar": "assets/images/avatar.png",
+    "phone": "0901234567",
+    "address": "123 Đường Lê Lợi, Phường Bến Nghé, Quận 1, TP.HCM",
+    "createdAt": "2024-11-10T00:00:00.000Z"
+  }
+]

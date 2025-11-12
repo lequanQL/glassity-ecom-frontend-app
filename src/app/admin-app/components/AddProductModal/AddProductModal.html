@@ -1,0 +1,140 @@
+<div class="modal-overlay" *ngIf="isVisible" (click)="closeModal()">
+    <div class="modal-container" (click)="$event.stopPropagation()">
+        <div class="modal-header">
+            <h2 class="modal-title">ADDING PRODUCT</h2>
+            <button class="close-btn" (click)="closeModal()">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="modal-body">
+            <form class="product-form" (ngSubmit)="onSubmit()" #productForm="ngForm">
+                <div class="form-row">
+                    <label class="form-label" for="name1">Name:</label>
+                    <input 
+                        type="text" 
+                        id="name1"
+                        class="form-input" 
+                        [(ngModel)]="product.name1" 
+                        name="name1"
+                        required>
+                    <span class="required">*</span>
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="name2">Name:</label>
+                    <input 
+                        type="text" 
+                        id="name2"
+                        class="form-input" 
+                        [(ngModel)]="product.name2" 
+                        name="name2"
+                        required>
+                    <span class="required">*</span>
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="color">Color:</label>
+                    <input 
+                        type="text" 
+                        id="color"
+                        class="form-input" 
+                        [(ngModel)]="product.color" 
+                        name="color"
+                        required>
+                    <span class="required">*</span>
+                    <small class="add-more">Add more colors.</small>
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="frameMaterial">Frame Material:</label>
+                    <input 
+                        type="text" 
+                        id="frameMaterial"
+                        class="form-input" 
+                        [(ngModel)]="product.frameMaterial" 
+                        name="frameMaterial"
+                        required>
+                    <span class="required">*</span>
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="lensMaterial">Lens Material:</label>
+                    <input 
+                        type="text" 
+                        id="lensMaterial"
+                        class="form-input" 
+                        [(ngModel)]="product.lensMaterial" 
+                        name="lensMaterial"
+                        required>
+                    <span class="required">*</span>
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="price">Price:</label>
+                    <input 
+                        type="number" 
+                        id="price"
+                        class="form-input" 
+                        [(ngModel)]="product.price" 
+                        name="price"
+                        required>
+                    <span class="required">*</span>
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="stock">Stock:</label>
+                    <input 
+                        type="number" 
+                        id="stock"
+                        class="form-input" 
+                        [(ngModel)]="product.stock" 
+                        name="stock"
+                        required>
+                    <span class="required">*</span>
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="images">Images:</label>
+                    <button 
+                        type="button" 
+                        class="select-images-btn"
+                        (click)="selectImages()">
+                        Select images
+                    </button>
+                    <span class="required">*</span>
+                    <input 
+                        type="file" 
+                        #fileInput 
+                        multiple 
+                        accept="image/*" 
+                        style="display: none;"
+                        (change)="onImagesSelected($event)">
+                </div>
+
+                <div class="form-row description-row">
+                    <label class="form-label" for="description">Description:</label>
+                    <textarea 
+                        id="description"
+                        class="form-textarea" 
+                        [(ngModel)]="product.description" 
+                        name="description"
+                        rows="4"
+                        required></textarea>
+                    <span class="required">*</span>
+                </div>
+
+                <div class="modal-footer">
+                    <button 
+                        type="submit" 
+                        class="complete-btn"
+                        [disabled]="!productForm.form.valid">
+                        COMPLETE
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

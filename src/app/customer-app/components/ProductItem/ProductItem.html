@@ -1,0 +1,12 @@
+<div class="product-item" [routerLink]="['/detail', id]">
+    <img src={{img}} alt="">
+    <br/>
+    <div class="name">
+        {{code}}
+    </div>
+    @if (hasPrice()) {
+        <div class="price">
+            {{price! | priceFormat}}
+        </div>
+    }
+</div>

@@ -1,0 +1,56 @@
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    bottom: 0;
+    color: white;
+    bottom: 0;
+}
+
+.footer-container .up-side {
+    background-color: #314540;
+    height: 30vh;
+}
+
+.footer-container .down-side {
+    background-color: white;
+    height: 4vh;
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.footer-container .about-us {
+    width: 5vw;
+}
+
+.footer-container .comp-info {
+    width: 30vw;
+}
+
+.footer-container .policy {
+    width: 20vw;
+}
+
+.footer-container .content {
+    font-size: 10px;
+    font-weight: 100;
+    margin-block: 2%;
+}
+
+.content-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+
+.social {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-block: 5%;
+}
+

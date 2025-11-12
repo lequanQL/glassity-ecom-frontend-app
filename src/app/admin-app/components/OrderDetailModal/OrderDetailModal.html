@@ -1,0 +1,102 @@
+<div class="modal-overlay" *ngIf="isVisible" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <div class="modal-header">
+            <h3>Chi tiết đơn hàng #{{order.id}}</h3>
+            <button type="button" class="close-btn" (click)="closeModal()">
+                <span>&times;</span>
+            </button>
+        </div>
+        
+        <div class="modal-body">
+            <div class="order-info-grid">
+                <!-- Customer Information -->
+                <div class="info-section">
+                    <h4>Thông tin khách hàng</h4>
+                    <div class="info-item">
+                        <span class="label">Tên:</span>
+                        <span class="value">{{order.customerName}}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Email:</span>
+                        <span class="value">{{order.customerEmail}}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Số điện thoại:</span>
+                        <span class="value">{{order.customerPhone}}</span>
+                    </div>
+                </div>
+
+                <!-- Order Information -->
+                <div class="info-section">
+                    <h4>Thông tin đơn hàng</h4>
+                    <div class="info-item">
+                        <span class="label">Ngày đặt:</span>
+                        <span class="value">{{order.date | date:'dd/MM/yyyy HH:mm'}}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Trạng thái:</span>
+                        <span class="value">
+                            <span class="status-badge" [ngClass]="'status-' + order.status">
+                                {{getStatusText(order.status)}}
+                            </span>
+                        </span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Tổng tiền:</span>
+                        <span class="value total-amount">{{order.total | currency:'VND':'symbol':'1.0-0'}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shipping Address -->
+            <div class="info-section full-width">
+                <h4>Địa chỉ giao hàng</h4>
+                <div class="address-text">
+                    {{order.shippingAddress}}
+                </div>
+            </div>
+
+            <!-- Order Items -->
+            <div class="info-section full-width">
+                <h4>Sản phẩm</h4>
+                <div class="items-list">
+                    <div class="item-row" *ngFor="let item of order.items">
+                        <div class="item-image">
+                            <img [src]="item.image" [alt]="item.name" />
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">{{item.name}}</div>
+                            <div class="item-details">
+                                <span class="quantity">Số lượng: {{item.quantity}}</span>
+                                <span class="price">{{item.price | currency:'VND':'symbol':'1.0-0'}}</span>
+                            </div>
+                        </div>
+                        <div class="item-total">
+                            {{(item.price * item.quantity) | currency:'VND':'symbol':'1.0-0'}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <div class="status-update">
+                <label for="status-select">Cập nhật trạng thái:</label>
+                <select id="status-select" [(ngModel)]="selectedStatus" class="status-select">
+                    <option value="pending">Đang chờ</option>
+                    <option value="processing">Đang xử lý</option>
+                    <option value="shipping">Đang giao</option>
+                    <option value="delivered">Đã giao</option>
+                </select>
+            </div>
+            <div class="footer-actions">
+                <button type="button" class="update-btn" (click)="updateStatus()">
+                    Cập nhật
+                </button>
+                <button type="button" class="cancel-btn" (click)="closeModal()">
+                    Đóng
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

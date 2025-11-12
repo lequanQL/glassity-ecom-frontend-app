@@ -1,0 +1,14 @@
+.default-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  margin-top: 12vh; /* Account for header height (4vh + 8vh) */
+  flex: 1;
+}
+
+.footer-wrapper {
+  margin-top: auto;
+}

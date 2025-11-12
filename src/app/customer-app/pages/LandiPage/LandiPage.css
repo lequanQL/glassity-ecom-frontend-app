@@ -1,0 +1,65 @@
+.ladi-page img {
+    width: 100vw;
+}
+
+.ladi-page .products {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 2%;
+    align-items: center;
+}
+
+.ladi-page .try-on {
+    margin: 5%;
+}
+
+.ladi-page .try-on img{
+    width: 100%;
+}
+
+.ladi-page .try-on-2 .image-2{
+    width: 100%;
+}
+
+.ladi-page .try-on-2 .image-1{
+    width: 35%;
+}
+
+.ladi-page .content {
+    margin-block: 5%;
+}
+
+.ladi-page .discover-btn {
+    background-color: #B35517;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10%;
+    height: 50px;
+}
+
+.ladi-page .try-on-2 .try-on-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-inline: 5%;
+}
+
+.ladi-page .try-on-2 .title {
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.ladi-page .try-on-2 .content {
+    font-size: 20px;
+    text-align: center;
+}
+
+.ladi-page .other-products .title {
+    font-size: 35px;
+    text-align: center;
+    margin-block: 5%;
+}

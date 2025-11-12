@@ -1,0 +1,215 @@
+<div class="product-page">
+    <div class="top-section">
+        <div class="left-side">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="">
+                <div class="content">
+                    Glassity ra đời với khát vọng mang đến những thiết kế hiện đại, thời trang, cá tính và sự tinh tế.
+                    Mỗi chiếc kính được chế tác tỉ mỉ, kết hợp giữa chất liệu cao cấp và nghệ thuật thiết kế đương đại,
+                    tạo nên điểm nhấn hoàn hảo cho mọi phong cách.
+                    Dù là thương hiệu trẻ, Glassity vẫn giữ trọn tinh thần thủ công và sự chỉn chu trong từng chi tiết —
+                    như một lời cam kết về chất lượng và gu thẩm mỹ vượt thời gian. Với Glassity, kính mắt không chỉ là
+                    phụ kiện, mà là cách bạn thể hiện bản sắc riêng trong thế giới không ngừng chuyển động.
+                </div>
+            </div>
+        </div>
+        <div class="right-side">
+            <img src="assets/images/products/main.png" alt="logo" style="height: 100%">
+        </div>
+    </div>
+
+    <div class="trending">
+        <div class="head">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="title">
+                        Trending
+                    </div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="filter">
+                        <div class="filter-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-star" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
+                            </svg>
+                            <div class="name" style="margin-inline: 10px;">
+                                Shape
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                            </svg>
+                        </div>
+                        <div class="filter-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-star" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
+                            </svg>
+                            <div class="name" style="margin-inline: 10px;">
+                                Price
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="products">
+            <product-item [img]="products[0].img"  [code]="products[0].code"
+                [price]="products[0].price" [id]="products[0].id"></product-item>
+            <product-item [img]="products[1].img"  [code]="products[1].code"
+                [price]="products[1].price" [id]="products[1].id"></product-item>
+            <product-item [img]="products[2].img"  [code]="products[2].code"
+                [price]="products[2].price" [id]="products[2].id"></product-item>
+        </div>
+        <div class="products">
+            <product-item [img]="products[3].img"  [code]="products[3].code"
+                [price]="products[3].price" [id]="products[3].id"></product-item>
+            <product-item [img]="products[4].img"  [code]="products[4].code"
+                [price]="products[4].price" [id]="products[4].id"></product-item>
+            <product-item [img]="products[5].img"  [code]="products[5].code"
+                [price]="products[5].price" [id]="products[5].id"></product-item>
+        </div>
+    </div>
+
+    <div class="fashion">
+        <div class="head">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="title">
+                        Fashion
+                    </div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="filter">
+                        <div class="filter-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-star" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
+                            </svg>
+                            <div class="name" style="margin-inline: 10px;">
+                                Shape
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                            </svg>
+                        </div>
+                        <div class="filter-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-star" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
+                            </svg>
+                            <div class="name" style="margin-inline: 10px;">
+                                Price
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="products">
+            <product-item [img]="products[0].img"  [code]="products[0].code"
+                [price]="products[0].price" [id]="products[0].id"></product-item>
+            <product-item [img]="products[1].img"  [code]="products[1].code"
+                [price]="products[1].price" [id]="products[1].id"></product-item>
+            <product-item [img]="products[2].img"  [code]="products[2].code"
+                [price]="products[2].price" [id]="products[2].id"></product-item>
+        </div>
+        <div class="products">
+            <product-item [img]="products[3].img"  [code]="products[3].code"
+                [price]="products[3].price" [id]="products[3].id"></product-item>
+            <product-item [img]="products[4].img"  [code]="products[4].code"
+                [price]="products[4].price" [id]="products[4].id"></product-item>
+            <product-item [img]="products[5].img"  [code]="products[5].code"
+                [price]="products[5].price" [id]="products[5].id"></product-item>
+        </div>
+    </div>
+
+        <div class="special">
+        <div class="head">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="title">
+                        Special
+                    </div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="filter">
+                        <div class="filter-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-star" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
+                            </svg>
+                            <div class="name" style="margin-inline: 10px;">
+                                Shape
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                            </svg>
+                        </div>
+                        <div class="filter-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-star" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
+                            </svg>
+                            <div class="name" style="margin-inline: 10px;">
+                                Price
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="products">
+            <product-item [img]="products[6].img"  [code]="products[6].code"
+                [price]="products[6].price" [id]="products[6].id"></product-item>
+            <product-item [img]="products[7].img"  [code]="products[7].code"
+                [price]="products[7].price" [id]="products[7].id"></product-item>
+        </div>
+        <div class="products">
+            <product-item [img]="products[8].img"  [code]="products[8].code"
+                [price]="products[8].price" [id]="products[8].id"></product-item>
+            <product-item [img]="products[9].img"  [code]="products[9].code"
+                [price]="products[9].price" [id]="products[9].id"></product-item>
+        </div>
+    </div>
+    
+    <!-- You May Also Like Section -->
+    <app-related-products 
+        [title]="'* YOU MAY ALSO LIKE *'"
+        [maxItems]="6"
+        [showMoreIcon]="true">
+    </app-related-products>
+</div>

@@ -1,0 +1,57 @@
+@if (relatedProducts && relatedProducts.length > 0) {
+    <div class="related-products">
+        <div class="title">
+            {{title}}
+        </div>
+        <div class="carousel-container">
+            @if (totalSlides > 1) {
+                <button class="carousel-btn carousel-btn-prev" 
+                        (click)="previousSlide()" 
+                        [disabled]="currentSlide === 0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                    </svg>
+                </button>
+            }
+            
+            <div class="carousel-wrapper">
+                <div class="carousel-track" [style.transform]="'translateX(-' + (currentSlide * 100) + '%)'">
+                    @for (slide of slides; track $index; let i = $index) {
+                        <div class="carousel-slide">
+                            @for (product of slide; track product.id) {
+                                <product-item 
+                                    [img]="product.img" 
+                                    [code]="product.code"
+                                    [price]="product.price" 
+                                    [id]="product.id">
+                                </product-item>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+            
+            @if (totalSlides > 1) {
+                <button class="carousel-btn carousel-btn-next" 
+                        (click)="nextSlide()" 
+                        [disabled]="currentSlide === totalSlides - 1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                    </svg>
+                </button>
+            }
+        </div>
+        
+        @if (totalSlides > 1) {
+            <div class="carousel-dots">
+                @for (dot of dots; track $index; let i = $index) {
+                    <button 
+                        class="carousel-dot" 
+                        [class.active]="i === currentSlide"
+                        (click)="goToSlide(i)">
+                    </button>
+                }
+            </div>
+        }
+    </div>
+}

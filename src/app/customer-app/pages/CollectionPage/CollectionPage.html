@@ -1,0 +1,116 @@
+<div class="collection-page">
+    <div class="top-section">
+        <div class="left-side">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="">
+                <div class="content">
+                    Glassity ra đời với khát vọng mang đến những thiết kế hiện đại, thời trang, cá tính và sự tinh tế.
+                    Mỗi chiếc kính được chế tác tỉ mỉ, kết hợp giữa chất liệu cao cấp và nghệ thuật thiết kế đương đại,
+                    tạo nên điểm nhấn hoàn hảo cho mọi phong cách.
+                    Dù là thương hiệu trẻ, Glassity vẫn giữ trọn tinh thần thủ công và sự chỉn chu trong từng chi tiết —
+                    như một lời cam kết về chất lượng và gu thẩm mỹ vượt thời gian. Với Glassity, kính mắt không chỉ là
+                    phụ kiện, mà là cách bạn thể hiện bản sắc riêng trong thế giới không ngừng chuyển động.
+                </div>
+            </div>
+        </div>
+        <div class="right-side">
+            <img [src]="currentCollection.image" [alt]="currentCollection.displayName" style="height: 100%" 
+                 onerror="this.src='assets/images/collection_page/summer.png'">
+        </div>
+    </div>
+
+    <!-- Dynamic Collection Sections -->
+    @for (collectionData of collectionsWithProducts; track collectionData.collection.name) {
+        <div class="collection-section">
+            <div class="head">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="title">
+                            {{collectionData.collection.displayName}}
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <div class="filter">
+                            <div class="filter-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-star" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
+                                </svg>
+                                <div class="name" style="margin-inline: 10px;">
+                                    Shape
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                            <div class="filter-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-star" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
+                                </svg>
+                                <div class="name" style="margin-inline: 10px;">
+                                    Price
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+
+            <!-- Products Display -->
+            @if (collectionData.featuredProducts.length > 0) {
+                <div class="products">
+                    @for (product of collectionData.featuredProducts; track product.id; let i = $index) {
+                        @if (i < 2) {
+                            <product-item [img]="product.img" [code]="product.code"
+                                [price]="product.price" [id]="product.id"></product-item>
+                        }
+                    }
+                </div>
+            }
+            
+            @if (collectionData.featuredProducts.length > 2) {
+                <div class="products">
+                    @for (product of collectionData.featuredProducts; track product.id; let i = $index) {
+                        @if (i >= 2 && i < 4) {
+                            <product-item [img]="product.img" [code]="product.code"
+                                [price]="product.price" [id]="product.id"></product-item>
+                        }
+                    }
+                </div>
+            }
+
+            @if (collectionData.additionalProducts.length > 0) {
+                <div class="products">
+                    @for (product of collectionData.additionalProducts; track product.id) {
+                        <product-item [img]="product.img" [code]="product.code"
+                            [price]="product.price" [id]="product.id"></product-item>
+                    }
+                </div>
+            }
+            
+            @if (collectionData.products.length === 0) {
+                <div class="no-products">
+                    <p>No products available in this collection.</p>
+                </div>
+            }
+        </div>
+    }
+
+    <!-- More from All Collections Section -->
+    <app-related-products 
+        [title]="'* DISCOVER MORE STYLES *'"
+        [maxItems]="12"
+        [showMoreIcon]="true">
+    </app-related-products>
+</div>

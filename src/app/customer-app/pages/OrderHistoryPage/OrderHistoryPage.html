@@ -1,0 +1,119 @@
+<div class="order-history-container">
+  <h2>Order History</h2>
+  
+  <div class="orders-list" *ngIf="orders().length > 0; else noOrders">
+    <div class="order-card" *ngFor="let order of orders()">
+      <div class="order-header">
+        <div class="order-info">
+          <h3>Order #{{order.orderNumber}}</h3>
+          <p class="order-date">{{order.createdAt | date:'dd/MM/yyyy HH:mm'}}</p>
+        </div>
+        <div class="order-status">
+          <span class="status-badge" [ngClass]="getStatusClass(order.status)">
+            {{getStatusText(order.status)}}
+          </span>
+        </div>
+      </div>
+      
+      <div class="order-summary">
+        <div class="order-items-preview">
+          <p><strong>Items:</strong> {{order.items.length}} item(s)</p>
+          <p><strong>Total:</strong> {{order.totals.total | priceFormat}}</p>
+          <p><strong>Payment:</strong> {{getPaymentMethodText(order.payment.method)}}</p>
+        </div>
+        
+        <button class="view-detail-btn" (click)="viewOrderDetail(order)">
+          View Details
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noOrders>
+    <div class="no-orders">
+      <p>You haven't placed any orders yet.</p>
+      <a routerLink="/products" class="shop-now-btn">Start Shopping</a>
+    </div>
+  </ng-template>
+</div>
+
+<!-- Order Detail Modal -->
+<div class="modal-overlay" *ngIf="showOrderDetail()" (click)="closeOrderDetail()">
+  <div class="modal-content order-detail-modal" (click)="$event.stopPropagation()" *ngIf="selectedOrder()">
+    <div class="modal-header">
+      <h2>Order Details - #{{selectedOrder()!.orderNumber}}</h2>
+      <button class="close-btn" (click)="closeOrderDetail()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <div class="order-status-section">
+        <h3>Order Status</h3>
+        <span class="status-badge large" [ngClass]="getStatusClass(selectedOrder()!.status)">
+          {{getStatusText(selectedOrder()!.status)}}
+        </span>
+        <p class="order-date">Placed on {{selectedOrder()!.createdAt | date:'dd/MM/yyyy HH:mm'}}</p>
+      </div>
+
+      <div class="shipping-info-section">
+        <h3>Shipping Information</h3>
+        <div class="info-grid">
+          <p><strong>Name:</strong> {{selectedOrder()!.customerInfo.fullName}}</p>
+          <p><strong>Phone:</strong> {{selectedOrder()!.customerInfo.phone}}</p>
+          <p><strong>Email:</strong> {{selectedOrder()!.customerInfo.email}}</p>
+          <p><strong>Address:</strong> {{selectedOrder()!.customerInfo.address}}</p>
+          <p><strong>City:</strong> {{selectedOrder()!.customerInfo.city}}</p>
+          <p><strong>District:</strong> {{selectedOrder()!.customerInfo.district}}</p>
+          <p><strong>Ward:</strong> {{selectedOrder()!.customerInfo.ward}}</p>
+          <p><strong>Shipping Method:</strong> {{getShippingMethodText(selectedOrder()!.shipping.method)}}</p>
+        </div>
+      </div>
+
+      <div class="order-items-section">
+        <h3>Order Items</h3>
+        <div class="items-list">
+          <div class="item-row" *ngFor="let item of selectedOrder()!.items">
+            <img [src]="item.img" [alt]="item.name" class="item-image" />
+            <div class="item-details">
+              <h4>{{item.name}}</h4>
+              <p class="item-code">{{item.code}}</p>
+              <p class="item-price">{{item.price | priceFormat}} x {{item.quantity}}</p>
+            </div>
+            <div class="item-total">
+              {{item.totalPrice | priceFormat}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-totals-section">
+        <h3>Order Summary</h3>
+        <div class="totals-list">
+          <div class="total-row">
+            <span>Subtotal:</span>
+            <span>{{selectedOrder()!.totals.subtotal | priceFormat}}</span>
+          </div>
+          <div class="total-row">
+            <span>Shipping:</span>
+            <span>{{selectedOrder()!.totals.shipping | priceFormat}}</span>
+          </div>
+          <div class="total-row" *ngIf="selectedOrder()!.totals.memberDiscount > 0">
+            <span>Member Discount:</span>
+            <span>-{{selectedOrder()!.totals.memberDiscount | priceFormat}}</span>
+          </div>
+          <div class="total-row" *ngIf="selectedOrder()!.totals.couponDiscount > 0">
+            <span>Coupon Discount:</span>
+            <span>-{{selectedOrder()!.totals.couponDiscount | priceFormat}}</span>
+          </div>
+          <div class="total-row final-total">
+            <span><strong>Total:</strong></span>
+            <span><strong>{{selectedOrder()!.totals.total | priceFormat}}</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

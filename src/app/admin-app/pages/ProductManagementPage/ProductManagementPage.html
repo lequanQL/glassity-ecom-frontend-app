@@ -1,0 +1,104 @@
+<div class="product-management">
+    <!-- Search and Filter Section -->
+    <div class="search-section">
+        <div class="search-controls">
+            <div class="search-group">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    placeholder="Search for Products"
+                    [(ngModel)]="searchTerm">
+            </div>
+            
+            <div class="filter-group">
+                <select class="filter-select" [(ngModel)]="selectedCategory">
+                    <option value="">All Categories</option>
+                    <option value="Prescription Glasses">Prescription Glasses</option>
+                    <option value="Sunglasses">Sunglasses</option>
+                    <option value="Blue Light Glasses">Blue Light Glasses</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <select class="filter-select" [(ngModel)]="selectedStatus">
+                    <option value="">All Products</option>
+                    <option value="In Stock">In Stock</option>
+                    <option value="Out of Stock">Out of Stock</option>
+                    <option value="Low Stock">Low Stock</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="action-buttons">
+            <button class="export-btn">Export</button>
+            <button class="add-btn" (click)="openAddProductModal()">+ Add Product</button>
+        </div>
+    </div>
+
+    <!-- Products Table -->
+    <div class="table-container">
+        <table class="products-table">
+            <thead>
+                <tr>
+                    <th class="checkbox-col">
+                        <input type="checkbox" [(ngModel)]="selectAll" (change)="toggleSelectAll()">
+                    </th>
+                    <th>Name</th>
+                    <th>Code</th>
+                    <th>Price #</th>
+                    <th class="stock-col">
+                        <div class="stock-header">
+                            <span class="stock-icon">L</span>
+                            <span>Stock</span>
+                        </div>
+                    </th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of filteredProducts(); let i = index" class="product-row">
+                    <td class="checkbox-col">
+                        <input type="checkbox" [(ngModel)]="product.selected">
+                    </td>
+                    <td class="product-info">
+                        <div class="product-details">
+                            <img [src]="product.colors[0]?.image || 'assets/images/product_items/default.png'" [alt]="product.fullName" class="product-image">
+                            <span class="product-name">{{product.fullName}}</span>
+                        </div>
+                    </td>
+                    <td class="product-code">{{product.code}}</td>
+                    <td class="product-price">{{product.price | currency:'VND':'symbol':'1.0-0'}}</td>
+                    <td class="product-stock">{{product.stock}}</td>
+                    <td class="action-col">
+                        <button class="action-btn delete-btn" (click)="deleteProduct(product.id)">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                                <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                            </svg>
+                        </button>
+                        <button class="action-btn edit-btn" (click)="editProduct(product.id)">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708L15.207 4.5 9.5 10.207l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 0-.708l3-3L13.293.854l.853.292zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm-1.414 1.414L9.5 4.207 11.793 6.5l.293-.293z"/>
+                            </svg>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Add Product Modal -->
+    <add-product-modal 
+        [isVisible]="showAddProductModal"
+        (onClose)="closeAddProductModal()"
+        (onProductAdd)="addNewProduct($event)">
+    </add-product-modal>
+
+    <!-- Edit Product Modal -->
+    <edit-product-modal 
+        [isVisible]="showEditProductModal"
+        [productToEdit]="productToEdit"
+        (onClose)="closeEditProductModal()"
+        (onProductUpdate)="updateProduct($event)">
+    </edit-product-modal>
+</div>
